@@ -26,6 +26,9 @@ public class RobotContainer {
 
   private final ExampleCommand m_autoCommand = new ExampleCommand(m_exampleSubsystem);
 
+  public static Joystick leftJoystick;
+  public static Joystick rightJoystick;
+
 
 
   /**
@@ -33,6 +36,8 @@ public class RobotContainer {
    */
   public RobotContainer() {
     // Configure the button bindings
+    Joystick leftJoystick = new Joystick(Constants.leftJoystickPort);
+    Joystick rightJoystick = new Joystick(Constants.rightJoystickPort);
     configureButtonBindings();
   }
 
@@ -43,7 +48,7 @@ public class RobotContainer {
    * {@link edu.wpi.first.wpilibj2.command.button.JoystickButton}.
    */
   private void configureButtonBindings() {
-    Joystick leftJoystick = new Joystick(Constants.leftJoystickPort);
+    
   }
 
 
