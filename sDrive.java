@@ -19,11 +19,6 @@ public class sDrive extends SubsystemBase {
     leftSlaveMotor.follow(leftMasterMotor);
     rightSlaveMotor.follow(rightMasterMotor);
     
-    leftSlaveMotor.configFactoryDefault();
-    rightSlaveMotor.configFactoryDefault();
-    leftMasterMotor.configFactoryDefault();
-    rightMasterMotor.configFactoryDefault();
-
     leftSlaveMotor.setInverted(false);
     rightSlaveMotor.setInverted(false);
     leftMasterMotor.setInverted(false);

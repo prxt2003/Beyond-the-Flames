@@ -7,17 +7,20 @@
 
 package frc.robot.subsystems;
 
+import com.ctre.phoenix.motorcontrol.can.WPI_VictorSPX;
+
 import edu.wpi.first.wpilibj2.command.CommandBase;
+import frc.robot.Constants;
 
 public class sScissor extends CommandBase {
-  /**
-   * Creates a new sScissor.
-   */
-  public sScissor() {
-    // Use addRequirements() here to declare subsystem dependencies.
-  }
+  WPI_VictorSPX scissorActuator = new WPI_VictorSPX(Constants.scissorActuator);
 
-  // Called when the command is initially scheduled.
+
+  public sScissor() {
+    scissorActuator.configFactoryDefault();
+    scissorActuator.setInverted(false);
+  }
+  
   @Override
   public void initialize() {
   }
