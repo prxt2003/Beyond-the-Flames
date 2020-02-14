@@ -85,22 +85,31 @@ public class Robot extends TimedRobot {
   public void autonomousPeriodic() {
     double time = Timer.getFPGATimestamp();
     
-    if(time - startTime < 10|| 3 < time - startTime < 10){
-      leftMotor1.set(0.6);
-      leftMotor2.set(0.6);
-      righttMotor1.set(-0.6);
-      rightMotor2.set(-0.6);
-    } else if (time - startTime < 3){ 
+    if(time - startTime < 3){
       leftMotor1.set(0.6);
       leftMotor2.set(0.6);
       righttMotor1.set(0.6);
       rightMotor2.set(0.6);
+    } else if ( time - startTime < 10|| 3 <= time - startTime){ 
+      leftMotor1.set(0.6);
+      leftMotor2.set(0.6);
+      righttMotor1.set(-0.6);
+      rightMotor2.set(-0.6);
+    } else if (time - startTime < 12|| 10 <= time - startTime){
+    sPiston.hatchPiston.set(Value.kForward)
+    } else if (time - startTime < 14|| 12 <= time - startTime){
+    sPiston.hatchPiston.set(Value.kOff)
+    } else if (time - startTime < 16|| 14 <= time - startTime){
+    sPiston.hatchPiston.set(Value.kReverse) 
     } else {
       leftMotor1.set(0);
       leftMotor2.set(0);
       righttMotor1.set(0);
       rightMotor2.set(0);
     }
+  }
+  
+  
   }
 
   @Override
