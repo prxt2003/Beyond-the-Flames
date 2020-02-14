@@ -96,11 +96,11 @@ public class Robot extends TimedRobot {
       righttMotor1.set(-0.6);
       rightMotor2.set(-0.6);
     } else if (time - startTime < 12|| 10 <= time - startTime){
-    sPiston.hatchPiston.set(Value.kForward)
+      sPiston.hatchPiston.set(Value.kForward)
     } else if (time - startTime < 14|| 12 <= time - startTime){
-    sPiston.hatchPiston.set(Value.kOff)
+      sPiston.hatchPiston.set(Value.kOff)
     } else if (time - startTime < 16|| 14 <= time - startTime){
-    sPiston.hatchPiston.set(Value.kReverse) 
+      sPiston.hatchPiston.set(Value.kReverse) 
     } else {
       leftMotor1.set(0);
       leftMotor2.set(0);
