@@ -91,10 +91,10 @@ public class Robot extends TimedRobot {
       righttMotor1.set(0.6);
       rightMotor2.set(0.6);
     } else if ( time - startTime < 10|| 3 <= time - startTime){ 
-      leftMotor1.set(0.6);
-      leftMotor2.set(0.6);
-      righttMotor1.set(-0.6);
-      rightMotor2.set(-0.6);
+      leftMotor1.set(0);
+      leftMotor2.set(0);
+      righttMotor1.set(0);
+      rightMotor2.set(0);
     } else if (time - startTime < 12|| 10 <= time - startTime){
       scissorActuator(1);
     } else if (time - startTime < 14|| 12 <= time - startTime){
